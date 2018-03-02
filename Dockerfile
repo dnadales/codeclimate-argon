@@ -1,7 +1,7 @@
 #
 # Build stage
 #
-FROM fpco/stack-build:lts-10.7 as builder
+FROM fpco/stack-build:lts as builder
 MAINTAINER Pat Brisbin <pbrisbin@gmail.com>
 
 ENV LANG en_US.UTF-8
@@ -28,7 +28,7 @@ RUN stack install
 #
 # Runtime
 #
-FROM fpco/stack-run:lts-10.7
+FROM fpco/stack-run:lts
 MAINTAINER Pat Brisbin <pbrisbin@gmail.com>
 
 ENV LANG en_US.UTF-8
